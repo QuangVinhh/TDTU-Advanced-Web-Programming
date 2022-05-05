@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600&display=swap');
+
+.login-container{
+	height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(20deg, #c850c0, #4158d0);
+}
+
+.login-content{
+	border: 2px solid white;
+	border-radius: 40px;
+    align-items: center;
+    background: #fff;
+    width: 1000px;
+    margin: auto;
+	box-shadow: 10px 10px 20px rgba(255,255,255,0.2), 
+				10px 10px 20px rgba(0,0,0,0.1);
+}
+
+.login-logo img{
+	width: 500px;
+    height: 300px;
+}
+
+.login-form{
+	text-align: center;
+}
+
+.login-form form{
+	padding: 0 10px;
+}
+
+.login-form form img{
+	margin: 1rem 0;
+    width: 140px;
+}
+
+.login-form form h3{
+	color: #333;
+    font-size: 2rem;
+}
+
+.login-form form a{
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+
+.login-form form a:hover{
+	color: #4158d0;
+}
+
+.login-form-input{
+	position: relative;
+	border-bottom: 2px solid #adadad;
+	margin: 33px;
+	margin-top: 40px;
+}
+
+.login-form-input .login-message{
+	position: absolute;
+	bottom: -23px;
+	left: 0;
+	visibility: hidden;
+	font-size: 0.9rem;
+}
+
+.login-form-input input{
+	width: 100%;
+	padding: 10px;
+	margin-left: 20px;
+	height: 40px;
+	font-size: 1.2rem;
+	border: none;
+	outline: none;
+	/* background: none; */
+}
+
+.login-form-input label{
+	
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	color: #adadad;
+	font-size: 1rem;
+	transform: translateY(-50%);
+	pointer-events: none;
+	transition: .3s;
+}
+
+.login-form-input i{
+	position: absolute;
+	font-size: 1.5rem;
+	top: 50%;
+	left: 0px;
+	transform: translateY(-50%);
+	transition: .09s;
+}
+
+.login-form-input .i-check,
+.login-form-input .i-error{
+	left: 80%;
+	visibility: hidden;
+}
+
+.login-form-input span::before{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: #4158d0;
+	transition: .3s;
+}
+
+.login-form-input input:focus ~ label,
+.login-form-input input:valid ~ label{
+	top: -5px;
+	color: #4158d0;
+}
+
+.login-form-input input:focus ~ span::before,
+.login-form-input input:valid ~ span::before{
+	width: 100%;
+}
+
+.login-form-input.login-success .i-check{
+	color: #32be8f;
+	visibility: visible;
+	font-size: 30px;
+}
+
+.login-form-input.login-error .i-error{
+	color: #e74c3c;
+	visibility: visible;
+	font-size: 25px;
+}
+
+.login-form-input.login-error .login-message{
+	color:#e74c3c;
+	visibility: visible;
+}
+
+.login-button{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+
+.login-btn{
+	background-image: linear-gradient(to right, #c850c0, #4158d0, #c850c0);
+}
+
+.register-btn{
+	background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+}
+
+.login-button:hover{
+	background-position: right;
+}
+
+@media only screen and (max-width: 1000px){
+	.login-content{
+		width: 600px;
+	}
+}
+
+@media only screen and (max-width: 580px){
+	.login-content{
+		width: 300px;
+	}
+
+	.login-form-input.login-error .login-message{
+		font-size: 12px;
+	}
+
+	.login-form-input.login-error .i-error{
+		font-size: 20px;
+	}
+}
+
