@@ -1,0 +1,28 @@
+<section class="main">
+    <div class="main-right">
+        <div class="main-right-header">
+            <span>Thông Báo Mới</span>
+            <span><a href="/notification/all">Xem Tất Cả</a></span>
+        </div>
+        <% if (locals.notifications) { %>
+            <div class="main-right-list">
+                <% notifications.forEach((notification, index)=> { %>
+                    <% if (index >= 0 && index < 6) { %>
+                        <a href="/notification/<%= notification.faculty %>/<%= notification._id %>">
+                            <div class="notification">
+                                <div class="notification-detail">[<span class="user-faculty">
+                                        <%= notification.faculty %>
+                                    </span>] - <span class="time-convert">
+                                        <%= notification.createdAt %>
+                                    </span>
+                                </div>
+                                <div class="notification-title">
+                                    <%= notification.title %>
+                                </div>
+                            </div>
+                        </a>
+                    <% } %>
+                <% }) %>
+            </div>
+            <% } %>
+    </div>
